@@ -1,0 +1,16 @@
+;; Object elisp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "elisp/"
+  :tables (list 
+   (semanticdb-table "top.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("defgroup" code nil nil [2146 2261]) ("top-mode-generate-top-command-function" variable (:user-visible-flag t :default-value (quote top-mode-generate-top-command-default)) nil [2263 2682]) ("top-mode-column-header-regexp" variable (:user-visible-flag t :default-value "^\\s-+PID\\s-+USER.*COMMAND\\s-*$") nil [2684 2914]) ("top-mode-mark-face" variable (:user-visible-flag t :default-value (quote highlight)) nil [2916 3026]) ("top-mode-strace-command" variable (:user-visible-flag t :default-value "strace") nil [3028 3181]) ("top-mode-specific-user" variable nil nil [3196 3231]) ("top-mode-overlay-list" variable nil nil [3232 3266]) ("top-mode-generate-top-command-default-user-arg" variable (:default-value (quote unknown)) nil [3267 3331]) ("top-mode-generate-top-command-default" function (:arguments ("user")) nil [3333 4354]) ("top-mode-map" variable nil nil [4356 4442]) ("if" code nil nil [4444 5242]) ("top-mode" function (:user-visible-flag t) nil [5244 5856]) ("top-mode-revert-buffer-function" function (:arguments ("&optional" "ignore-auto" "noconfirm")) nil [5858 6012]) ("top-mode-buffer-stale-function" function (:arguments ("&optional" "noconfirm")) nil [6013 6075]) ("when" code nil nil [6157 6555]) ("top-mode-next-line" function nil nil [6557 6618]) ("top-mode-previous-line" function nil nil [6620 6689]) ("top-mode-fill-buffer" function (:arguments ("goto-first-process")) nil [6698 7512]) ("top" function (:user-visible-flag t) nil [7514 8071]) ("top-mode-string-trim" function (:arguments ("string")) nil [8073 8458]) ("top-mode-on-pid-line" function nil nil [8460 9238]) ("top-mode-goto-pid" function nil nil [9242 9476]) ("top-mode-get-pid-from-line" function nil nil [9478 9664]) ("top-mode-show-specific-user" function nil nil [9677 9935]) ("top-mode-get-target-pids" function nil nil [9937 10488]) ("top-mode-member-at-least-one" function (:arguments ("ls1" "ls2")) nil [10490 10665]) ("top-mode-unmark" function nil nil [10667 11154]) ("top-mode-mark" function nil nil [11156 11716]) ("top-mode-confirm-action" function (:arguments ("action-name" "pids")) nil [11718 11892]) ("top-mode-renice" function (:arguments ("&optional" "noconfirm")) nil [11894 12304]) ("top-mode-renice-noconfirm" function nil nil [12306 12380]) ("top-mode-strace" function (:arguments ("&optional" "noconfirm")) nil [12382 12849]) ("top-mode-strace-noconfirm" function nil nil [12851 12925]) ("top-mode-kill" function (:arguments ("&optional" "noconfirm")) nil [12927 13330]) ("top-mode-kill-noconfirm" function nil nil [13332 13402]) ("top-mode" package nil nil [13404 13423]))
+    :file "top.el"
+    :pointmax 13425
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

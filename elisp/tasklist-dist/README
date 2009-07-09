@@ -1,0 +1,129 @@
+tasklist - an extension to Emacs planner-mode
+=============================================
+
+This package provides two Perl scripts which add a nice task overview
+to the (x)html output of your planner. The HTML page provides a list
+of tasks that are scheduled between configurable start and end
+dates. The list provides links to each day page, to the particular
+task on a day page, and to the project page, all of these from the
+regular (x)html output created by publishing your planner. In addition
+you can request a mind map representation of your project on that
+tasklist which you can display with the freemind Java applet.
+
+Additional information is available here:
+
+http://www.mhoenicka.de/software/hacks/tasklist.html
+
+This version is considered beta quality and may have rough spots. Feel
+free to send complaints and suggestions to the
+planner-el-discuss@gna.org mailing list, or to
+markus@mhoenicka.de. The code is published under the GPL (see the
+script files for the full blurb).
+
+
+1) Prerequisites
+
+For this magic to work, you need a working installation of recent
+versions of Emacs muse and planner-mode. Both are available at
+http://www.mwolson.org. If you want to use the mind map feature,
+you'll also need a copy of freemindbrowser.jar, available at
+http://freemind.sourceforge.net.
+
+
+2) Install the Perl scripts
+
+Put the Perl scripts tasklist.pl and taskmm.pl into a suitable
+directory, e.g. ~/bin, and make sure they are executable (chmod a+x
+filename). Both files have a user-customizable section at the top
+which you should change as appropriate. tasklist.pl has a hardcoded
+path to taskmm.pl. If both scripts are in your PATH, you may get off
+with just "taskmm.pl" instead.
+
+
+3) Tweak your .emacs
+
+The relevant settings and functions required to run tasklist
+successfully are included in the file .planner-tasklist.el.  Put this
+file into your home directory and add the following line to your
+.emacs:
+
+(load-file "/path/to/.planner-tasklist.el")
+
+Make sure to customize paths and dates as appropriate.
+
+This file assumes that you have set up muse and planner
+appropriately. For reference purposes, this is the relevant section of
+my .emacs:
+
+--8<----
+;; use the local tweaked copy of muse
+(setq load-path (cons "/home/markus/sourceware/muse-el/lisp" load-path))
+(require 'muse-mode)
+(require 'muse-html)
+(require 'muse-latex)
+(require 'muse-docbook)
+
+;; the planner and such
+(setq load-path (cons "/home/markus/sourceware/planner" load-path))
+(require 'planner)
+(require 'planner-publish)
+
+(setq planner-project "WikiPlanner")
+(setq muse-project-alist
+      '(("WikiPlanner"
+	 ("~/Plans"           ;; where your Planner pages are located
+	  :default "TaskPool" ;; use value of `planner-default-page'
+	  :major-mode planner-mode
+	  :visit-link planner-visit-link)
+	 
+	 ;; This next part is for specifying where Planner pages
+	 ;; should be published and what Muse publishing style to
+	 ;; use.  In this example, we will use the XHTML publishing
+	 ;; style.
+	 
+	 (:base "planner-xhtml"
+		;; where files are published to
+		;; (the value of `planner-publishing-directory', if
+		;;  you have a configuration for an older version
+		;;  of Planner)
+		:path "~/public_html/plans"))))
+
+
+(load-file "/home/markus/.planner-tasklist.el")
+--8<----
+
+
+4) Create an index page
+
+The HTML page created by the scripts contains a link to an index
+page. You can ignore this link, or remove it from the custom footer
+defined in .planner-tasklist. Better yet, you can provide an index
+page for the link to jump to. To this end, create a file index.muse in
+your project directory and use the following contents:
+
+<markup>
+<lisp>(planner-index-as-string t t)</lisp>
+</markup>
+
+
+5) Prepare the output directory
+
+The (x)html files published by planner will end up in a directory
+("~/public_html/plans" in the above example). The plans subdirectory
+of the tasklist-dist archive contains a CSS example file and a
+directory with icons which are used by the tasklist created by the
+Perl scripts. Make sure to provide these files in your output
+directory. In addition, put your copy of freemindbrowser.jar into the
+same directory.
+
+
+6) Creating the task list
+
+If you use the provided setup, the task list will be created
+automatically whenever you run Ctrl-c Ctrl-p to publish the
+project. If there are many files, the generation of the mind map may
+take some time, so please be patient. If you want to create the task
+list without publishing your project, you can also run
+my-planner-tasklist anytime.
+
+

@@ -1,0 +1,45 @@
+/ChangeLog/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/FAQ/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/INDEX/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/Make_vms.com/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/Makefile/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/Makefile.in/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/Makefile.riscos/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/README/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/adler32.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/algorithm.txt/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/compress.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/configure/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/crc32.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/deflate.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/deflate.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/descrip.mms/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/example.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/gzio.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/infblock.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/infblock.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/infcodes.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/infcodes.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/inffast.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/inffast.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/inffixed.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/inflate.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/inftrees.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/inftrees.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/infutil.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/infutil.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/maketree.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/minigzip.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/trees.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/trees.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/uncompr.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/zconf.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/zlib.3/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/zlib.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/zutil.c/1.1.1.1/Wed Feb 13 21:20:27 2002//
+/zutil.h/1.1.1.1/Wed Feb 13 21:20:27 2002//
+D/amiga////
+D/contrib////
+D/msdos////
+D/nt////
+D/os2////

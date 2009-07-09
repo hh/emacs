@@ -1,0 +1,8 @@
+loaddefs.el*
+backups/*
+*elc
+places
+.DS_Store
+
+/#topfunky.el#
+/url/cookies

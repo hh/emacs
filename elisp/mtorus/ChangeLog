@@ -1,0 +1,343 @@
+2004-11-24  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el (mtorus-creation-default-names): fix, 
+	change defaults for file-type
+
+
+2004-09-25  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-type.el: added fix for type 'file when handling
+	tramp file names
+
+
+2004-09-16  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el:
+	- added indicator variables for the various behaviours
+	- fixed bug in mtorus-delete-<TYPE> functions
+	- added update of resurrection data on (mtorus-update-element)
+
+	* mtorus-state.el
+	- fixed bug when dumping elements where alive-p => nil
+	currently these elements are just omitted from dumping
+
+
+2004-09-15  Stefan Kamphausen  <mail@skamphausen.de>
+
+	* mtorus.el: Added some docstrings.
+
+2004-09-14  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-type.el: Add method resurrection of dead
+	elements
+
+	* mtorus-convert.el: Add some fix to mal-forms that may
+	occur during converting by ignore-errors macro
+
+	* mtorus-state.el:
+	- Make mtorus-state-file accept forms to be eval'd at run time
+	- Add mtorus-state-ask-for-state-file variable to determine
+	if a state filename is read from user
+	- Add prefix argument to mtorus-state-save/load to force
+	prompting for a filename
+
+
+2004-09-13  Stefan Kamphausen  <mail@skamphausen.de>
+
+	* mtorus-state.el: Added customized filename to save state in.
+
+	* mtorus.el (mtorus-install-suggested-bindings-ska): Fixed my
+	default bindings for CUA users.
+
+2004-09-10  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el: install new behaviour
+	`mtorus-en/disable-select-resurrects-dead'
+
+	* mtorus-type.el: add method resurrection of dead
+	elements
+
+	* mtorus-element.el: add resurrection-data to element's
+	property hash-table
+
+	* mtorus-state.el: make reloading saved torus work
+	- state-load uses facilities provided by new resurrection
+	(use M-x mtorus-enable-select-resurrects-dead RET to
+	make it work)
+
+
+2004-09-09  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-state.el: state loading works now
+	- loading an mtorus currently does not restore the value
+
+
+2004-09-05  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-convert.el: added conversion for type 'ring
+
+	* mtorus-state.el: dumping now works as intended
+	note: currently reloading the mtorus is yet not possible
+
+
+2004-09-05  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-convert.el: fix bug in conversion from/to 'file
+
+	* mtorus-state.el: add state dumping
+	(Currently not what could be called working)
+
+
+2004-09-04  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-convert.el: add conversion of types
+
+
+2004-08-31  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* all files:
+	- remove some cruft due to old bouncer funs
+
+	* mtorus-topology.el: 
+	- add new order (mtorus-order-by-atime)
+
+	* mtorus-element.el: add element property :atime
+	which holds the last access time of the element
+
+
+2004-08-25  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el: 
+	- add new behaviour (mtorus-enable-ring-induces-buffer)
+	this creates a buffer whenever creating a ring
+	- add new behaviour (mtorus-enable-buffer-induces-marker)
+	this creates a marker whenever creating a buffer
+	- add update-element functions
+	
+	* mtorus-type.el: add another element type 'file
+
+	* mtorus-utils.el: get rid of define-mtorus-element-keyword-type macro
+	use the more generic macro `define-mtorus-keyword-type' which requires
+	another argument PREFIX to install define-PREFIX-NAME keywords.
+
+
+2004-08-20  Stefan Kamphausen  <skamphausen@bn-software.de>
+
+	* mtorus.el (mtorus-install-suggested-bindings-ska): 
+	Update my personal keybindings.
+
+
+2004-08-18  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el: installed some behaviour
+	- mtorus-enable-select-follows-choose to immediately select the element
+	you've navigated to
+
+	* mtorus-display.el: (mtorus-notify-popup) another display fun that uses
+	mtorus-1.6 two line navigation display
+
+
+2004-08-11  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-topology.el: mtorus-topology-<TOPO>-find
+	- fixed mal topology initialization
+
+
+2004-08-11  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el:
+	- modified navigation via aunt/uncle/niece/nephew
+
+	* mtorus-display.el: (mtorus-display-siblings-2)
+	- installed another display function
+
+
+2004-08-10  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* all files:
+	- additional compatibility has been established, 
+	mtorus-utils-replace-regexp-in-string looks for a suitable
+	replace-in-string fun
+
+	* mtorus-display.el: (mtorus-display-siblings)
+	- works in GNUmacs, too now
+
+
+2004-08-09  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-topology.el:
+	- fixed order-by-age issue (supports abstract element keyword handlers now)
+
+	* mtorus-element.el:
+	- fixed the obarray bug in mtorus-element-obarray-names
+
+	* mtorus-display.el:
+	- fixed XEmacs echo area display (replaced search-forward more wise)
+
+	* mtorus-utils.el:
+	- moved element keyword handlers here (to abstract them)
+	further commits will have these handlers for type and topology, too.
+
+
+2004-08-08  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el:
+	- navigation now supports orders (mtorus-default-order)
+
+	* mtorus-topology.el:
+	- new fake-attach code
+	- added `mtorus-topology-<TOPO>-define-<NEIGHBORHOOD>-family' functions
+
+	* mtorus-type.el:
+	- predefined types respect the new attach code
+
+	* mtorus-element.el:
+	- revised element creation and handling
+	elements are not symbols anymore, instead they're saved in a container
+
+
+2004-08-05  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el:
+	- navigation is now entirely compatible to mtorus 1.6
+	(use mtorus-aunt-element and mtorus-uncle-element to browse
+	the parents' siblings) -- you have to `select' (mtorus-select-element)
+	the element though
+	- corrected some of the documentation strings
+
+	* mtorus-type.el
+	- added attach code for mtorus-1.6-esque navigation
+	- removed attach code to mtorus-topology.el
+
+	* mtorus-topology.el
+	- cleaned up the topology functions a little
+	- added more generic funs (provide kind of currying)
+	- added attach code from mtorus-type.el here and
+	installed ugly, non-general attach code functions to make the
+	torus a little more stable
+
+
+2004-08-02  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* all files: established some GNU Emacs compatibility
+
+	* mtorus-type.el:
+	- added pre/post-choose/unchoose funs to keep track of
+	navigations
+	- added alive-p method and auto-detaching code in predefined
+	types
+
+	* mtorus.el:
+	- stripped from old code :|
+
+	* mtorus-element.el
+	- element unregistration now looks for relations on the 
+	topology and undefines them, too
+
+
+2004-08-02  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el:
+	- added basic interactive functions for detaching
+	- abstracted message display
+
+	* mtorus-display.el
+	- new function container for all GUI functions
+
+	* mtorus-element.el
+	- backend functions for detaching
+
+	* mtorus-topology.el
+	- added functions to define/undefine arbitrary relations
+	- added find functions to locate an element on the torus topology
+
+
+2004-08-01  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus.el:
+	- added alpha version interactive functions
+	- added more hooks for interactive calls
+
+	* mtorus-element.el
+	- added element action hooks 
+	(i.e. (pre|post)(creation|selection|deletion))
+	- added -after-load-hook
+
+	* mtorus-type.el
+	- added type methods (i.e. functions whose return
+	values are needed)
+	- added attaching code here (which is not that correct)
+	- modified predefined types
+	- added -after-load-hook
+
+	* mtorus-topology.el
+	- added directed and undirected neighborhoods
+
+
+2004-07-28  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-topology.el: mtorus topology and neighborhoods
+	just work fine, thus state is beta
+
+	* mtorus-type.el: added auto-attach-to-topology in
+	mtorus-type-initialize (just a demonstration)
+
+	* mtorus-utils.el: (mtorus-utils-parse-key-cdr) added
+
+
+2004-07-28  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-element.el: stripped foreign definitions from file
+
+	* mtorus-topology.el: mtorus topology definitions
+
+	* mtorus-type.el: mtorus-type definitions
+
+	* mtorus-utils.el: useful auxiliary definitions
+
+
+2004-07-22  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-element.el: (mtorus-topology)
+	- added mtorus topology. this is most elementary
+	as the navigation on the torus depends on this
+	(currently only trivial topologies are available)
+
+	* mtorus.el:
+	- added frontend (i.e. interactive) funs to access the
+	newer backend
+	- bugfixed obarray issue when trying to create elements
+	without having created types
+
+	
+2004-07-20  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-element.el: bugfixed some leftovers
+
+	* mtorus.el: added new interactive ring creation fun
+
+
+2004-07-02  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-element.el: cleansed some docstrings, made 
+	`mtorus-type-hooks-alist' customizable.
+
+
+2004-07-01  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* mtorus-element.el: second (even more abstract) approach to
+	element and type handling.
+
+
+2004-06-26  Sebastian Freundt  <hroptatyr@users.berlios.de>
+
+	* ChangeLog: added ChangeLog file :)
+
+	* mtorus.el: added a basic set of interactive functions to
+	create rings and elements
+
+	* mtorus-rings.el: abstracted the creation of rings and
+	elements a little more.
+	- elements now have to be created via `mtorus-ring-create-element'
+	- elements have their own keeper variable `mtorus-elements'
+	- elements are not identified by their content but by a cookie

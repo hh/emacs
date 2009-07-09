@@ -1,0 +1,159 @@
+/* the emacs wiki default */
+a.nonexistent {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+  font-weight: bold;
+}
+
+a.nonexistent:visited {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+}
+
+body {
+  background-color: white;
+  color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+ul { list-style-type: disc }
+
+dl.contents { margin-top: 0; }
+dt.contents { margin-bottom: 0; }
+
+p.verse {
+  white-space: pre;
+  margin-left: 5%;
+}
+
+pre {
+  white-space: pre;
+  font-family: monospace;
+  margin-left: 5%;
+}
+
+/* Menu properties */
+
+.menu {
+  background-color: #F5F5F5;          /* white smoke */
+  color: white;
+  border-top: 5px solid #D3D3D3;      /* light gray */
+  border-bottom: 5px solid #D3D3D3;   /* light gray */
+  content: "Menu";
+  display: inline-table;
+  float: right;
+  padding: .5em;
+}
+
+.menuitem {
+  margin: .2em;
+  text-align: center;
+}
+
+.menuitem a:link, .menuitem a:visited {
+  color: #006400;                     /* dark green */
+  text-decoration: none;
+}
+
+.menuitem a:hover {
+  background-color: #D3D3D3;          /* light gray */
+}
+
+/* Uncomment this if you want characters to appear before a menu
+   entry when hovering the mouse over it.
+
+.menuitem a:hover:before { content:">> "}
+*/
+
+.menu:before {
+  border: 1pt solid;
+  color: #BEBEBE;                     /* gray */
+  display: block;
+  content: "Menu";
+  text-align: center;
+}
+
+#tooltipbox {
+  float: right;
+  visibility: hidden;
+}
+
+#tooltip {
+  color: #D3D3D3;                     /* light gray */
+}
+
+/* tasklist extensions */
+
+H1 {font-family: Verdana, Arial, Helvetica, sans-serif;
+          color: #00B000}
+
+H1.SECT1 {font-family: Verdana, Arial, Helvetica, sans-serif;
+          color: #009900}
+
+H2 {font-family: Verdana, Arial, Helvetica, sans-serif;
+             color: green}
+
+H3 {font-family: Verdana, Arial, Helvetica, sans-serif;
+             color: #006600}
+
+td.prioritya {
+	color: red;
+}
+
+td.taskpending {
+  font-weight: bold;
+}
+
+td.taskdone {
+  color: green;
+}
+
+td.taskoverdue {
+  color: red;
+}
+
+tr.atoday {
+  background-color: #FFFFAA;
+}
+
+tr.btoday {
+  background-color: #FFFFAA;
+}
+
+tr.ctoday {
+  background-color: #FFFFAA;
+}
+
+
+div.task_ {
+  font-weight: bold;
+}
+
+div.taskX {
+  color: green;
+}
+
+div.task> {
+  color: cyan;
+}
+
+div.taskP {
+
+}
+
+div.tasko {
+  color: blue;
+}
+
+div.taskC {
+
+}
+
+span.taskA {
+  color: red;
+}

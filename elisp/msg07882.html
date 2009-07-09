@@ -1,0 +1,154 @@
+<!-- MHonArc v2.5.2 -->
+<!--X-Subject:  emacs&#45;w3m 1.4.4 is released -->
+<!--X-From-R13: Yngfhzv Knznbxn <lnznbxnNwcy.bet> -->
+<!--X-Date: Fri, 25 Mar 2005 09:00:58 +0900 (JST) -->
+<!--X-Message-Id: b9yu0n0wq5b.fsf@jpl.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE> emacs-w3m 1.4.4 is released
+</TITLE>
+</HEAD>
+<BODY>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="msg07881.html">Date Prev</a>][<a href="msg07883.html">Date Next</a>][<a rel="previous" href="msg07917.html">Thread Prev</a>][<a rel="next" href="msg07892.html">Thread Next</a>][<a href="index.html#07882">Date Index</a>][<a rel="contents" href="thrd80.html#07882">Thread Index</a>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1> emacs-w3m 1.4.4 is released
+</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><em>From</em>: Katsumi Yamaoka &lt;yamaoka@xxxxxxx&gt;
+</li>
+<li><em>Date</em>: Fri, 25 Mar 2005 09:00:32 +0900
+</li>
+<li><em>X-ml-name</em>: emacs-w3m
+</li>
+<li><em>X-mail-count</em>: 07990
+</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>
+Here's a new version of emacs-w3m you've all been waiting for.
+
+	emacs-w3m 1.4.4 is released.
+
+It is available as:
+
+<A  HREF="http://emacs-w3m.namazu.org/emacs-w3m-1.4.4.tar.gz">http://emacs-w3m.namazu.org/emacs-w3m-1.4.4.tar.gz</A>  (796123-byte)
+MD5(emacs-w3m-1.4.4.tar.gz)= 6e592a9c0ab22fb532ebc3bcb21a45b1
+
+* Major changes since last release
+
+** The key bindings have been slightly changed in the Info-like map.
+`y' is for `w3m-print-current-url' and `Y' is for `w3m-print-this-url',
+and now `c' is not bound to any command.
+
+** emacs-w3m now shows decoded URIs in the echo area, the balloon,
+etc.  It works with Emacs 21.1 and newer and XEmacs.
+
+** Now you can use any major-mode to edit the text in forms.  The
+`w3m-form-textarea-edit-mode' option can be used to customize it.
+
+** Some commands, e.g., w3m, w3m-goto-url, etc., may generate a url
+that indicates the thread page in Gmane by default.  It is effective
+only when you invoke those commands on the References header or the
+Message-ID header.
+
+** emacs-w3m now stores the text you input in forms in backup files
+for later reuse.
+
+** The link numbering module was added.  It enables you to move the
+point to the numbered link by typing `number RET'.  See w3m-lnum.el.
+
+** Installation changes
+
+*** The installer looks for the shell command equivalent to /bin/sh by
+itself and uses it.  It will help installing emacs-w3m in M$ windows
+and OS/2.
+
+*** The installer adds the site-packages directories which might
+include APEL and FLIM packages to the load-path when installing
+emacs-w3m with XEmacs.
+
+*** Now the icon files will be installed into the etc/images/w3m/
+directory, which was etc/w3m/icons/ formerly (the parent directory for
+them will be /usr/local/ in the typical systems).  You can remove the
+old one manually.
+
+** All the shimbun modules have been verified and improved.
+
+*** The following modules were added: sb-fau.el, sb-yahoo-sports.el,
+sb-ffii.el, sb-yahoo-auctions.el, sb-wired-jp.el, sb-tigris.el,
+sb-excite.el, sb-the-register.el, sb-rediff.el, sb-wikimedia.el,
+sb-laut-de.el, sb-msdn.el and sb-weeklyworldnews.el.
+
+*** The sb-f1express.el module was removed.
+
+*** nnshimbun.el now supports the group deletion.  You can use `G DEL'
+to delete the specific shimbun group.
+
+* And a lot of bug fixes.
+</pre>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<ul>
+<li>Prev by Date:
+<strong><a href="msg07881.html"> Re: shimbun/sb-zeit-de problem with content charset selection
+</a></strong>
+</li>
+<li>Next by Date:
+<strong><a href="msg07883.html"> Re: Feature freeze
+</a></strong>
+</li>
+<li>Previous by thread:
+<strong><a href="msg07917.html"> Re: windows-1252
+</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg07892.html"> 
+mailmanの多
+言語化
+</a></strong>
+</li>
+<li>Index(es):
+<ul>
+<li><a href="index.html#07882"><strong>Date</strong></a></li>
+<li><a href="thrd80.html#07882"><strong>Thread</strong></a></li>
+</ul>
+</li>
+</ul>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<ul>
+<li><form method="GET" action="namazu.cgi" accept-charset="euc-jp,ascii">Namazu Search:
+<input type="text" name="key" size="30">
+<input type="submit" value="Find">
+[<a href="namazu.cgi">Help</a>]
+</form></li>
+</ul>
+<!--X-User-Footer-End-->
+</body>
+</html>
